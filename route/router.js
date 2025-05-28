@@ -1,5 +1,5 @@
 import express from "express"
-import {home ,about,adddata,subdata,registration,senddata,getregdata,login,log} from"../controller/routeController.js"
+import {home ,about,adddata,subdata,registration,senddata,getregdata,login,log, getlogdata, deletedata} from"../controller/routeController.js"
 const router=express.Router()
 router.get("/", home)
 router.get("/about", about)
@@ -10,6 +10,8 @@ router.post("/senddata",senddata)
 router.get("/getregdata",getregdata)
 router.get("/login",login)
 router.post("/log",log)
+router.get("/getlogdata",getlogdata)
+router.post("/showreg/delete/:id",deletedata)
 
 
 
