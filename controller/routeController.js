@@ -72,8 +72,15 @@ const deletedata=async(req,res)=>{
     await Reg.findByIdAndDelete(req.params.id)
     res.redirect("/getregdata")
 }
+const updateform=async(req,res)=>{
+    let d=await Reg.findById(req.params.id)
+    res.render("update",{d})
+}
+const update=async(req,res)=>{
+    await Reg.findByIdAndUpdate(req.params.id,req.body)
+    res.redirect("/getregdata")
+}
 
-
-export { home, about, adddata, subdata, registration, senddata, getregdata, login, log,getlogdata,deletedata }
+export { home, about, adddata, subdata, registration, senddata, getregdata, login, log,getlogdata,deletedata,updateform,update }
 
 // export {home,about,adddata,subdata}

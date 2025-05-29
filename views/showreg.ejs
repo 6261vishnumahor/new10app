@@ -18,8 +18,9 @@
                                 <%=e.cpass%> <br>
             </div>
             ====================================<br>
-            <form action="showreg/delete/<%e._id%>" method="post">
+            <form action="showreg/delete/<%=e._id %>" method="post">
                 <button>delete</button>
+                <a href="/showreg/updateform/<%=e._id%>">update</a>
             </form>
             <% })%>
     </div>
